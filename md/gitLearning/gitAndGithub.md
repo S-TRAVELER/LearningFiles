@@ -103,7 +103,7 @@ git push origin master</code></pre>
 
 - <code>git checkout dev</code>: 切换到分支dev
 
-- <code>git checkout -b dev</code>: -b参数表示创建并切换到新分支<code>git branch dev<code>和<code>git checkout dev</code>
+- <code>git checkout -b dev</code>: -b参数表示创建并切换到新分支<code>git branch dev</code>和<code>git checkout dev</code>
 
 - <code>git merge dev</code>: 合并分支，把dev分支合并到当前所在分支
 
@@ -136,4 +136,5 @@ fatal: 拒绝合并无关的历史
   <pre><code>git help command_name </code></pre>
 
 **参考资料：**
-- [廖雪峰git教程](https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000)
+
+- [廖雪峰git教程](https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000)  
