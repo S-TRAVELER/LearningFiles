@@ -1,4 +1,4 @@
-# Git
+# Git Base
 
 
 ## 指令清单
@@ -72,29 +72,42 @@ git push origin master</code></pre>
 
 ## 3. 本地仓管理
 
-- git status  查看仓库当前的状态
+- <code>git status</code>:  查看仓库当前的状态
 
-- git diff file  查看file文件修改了什么内容
+- <code>git diff file</code>:  查看file文件修改了什么内容
 
-- git log 查看commit历史记录
+- <code>git log</code>: 查看commit历史记录
 
-- git reset --hard HEAD^ 退回到上一个版本
+- <code>git reset --hard HEAD^</code>: 退回到上一个版本
 
-- git reset --hard 1094a 推出commit
+- <code>git reset --hard 1094a</code>: 推出commit
 
-- git reflog 查看命令执行记录
+- <code>git reflog</code>: 查看命令执行记录
 
-- git checkout -- readme.txt 可以丢弃工作区的修改，实是用版本库里的版本替换工作区的版本，无论工作区是修改还是删除，都可以“一键还原”。
+- <code>git checkout -- readme.txt</code>: 可以丢弃工作区的修改，实是用版本库里的版本替换工作区的版本，无论工作区是修改还是删除，都可以“一键还原”。
 
-- git reset HEAD readme.txt 把暂存区的修改撤销掉（unstage），重新放回工作区
+- <code>git reset HEAD readme.txt</code>: 把暂存区的修改撤销掉（unstage），重新放回工作区
 
   注：当你不但改乱了工作区某个文件的内容，还添加到了暂存区时，想丢弃修改
   先执行这条命令，再执行上一条命令
 
 
-- git rm test.txt 工作区删除文件，如果要彻底删除需要commit
+- <code>git rm test.txt</code>: 工作区删除文件，如果要彻底删除需要commit
 
-- rm -r .git 删除当前目录的本地仓库
+- <code>rm -r .git</code>: 删除当前目录的本地仓库
+
+## 4. 分支管理
+- <code>git branch</code>: 查看所有分支
+
+- <code>git branch dev</code>: 创建新分支dev
+
+- <code>git checkout dev</code>: 切换到分支dev
+
+- <code>git checkout -b dev</code>: -b参数表示创建并切换到新分支<code>git branch dev<code>和<code>git checkout dev</code>
+
+- <code>git merge dev</code>: 合并分支，把dev分支合并到当前所在分支
+
+- <code>git branch -d dev</code>: 删除分支dev
 
 
 ## 遇到的问题
@@ -118,3 +131,10 @@ remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
 fatal: 拒绝合并无关的历史
 </code></pre>
   解决方法：<pre><code>git pull origin master --allow-unrelated-histories </code></pre>
+
+  3. git文档帮助  
+
+  <pre><code>git help command_name </code></pre>
+
+**参考资料：**
+- [廖雪峰git教程](https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000)
