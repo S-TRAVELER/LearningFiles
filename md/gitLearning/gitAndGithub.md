@@ -94,4 +94,27 @@ git push origin master</code></pre>
 
 - git rm test.txt 工作区删除文件，如果要彻底删除需要commit
 
-- rm -r .git 删除当前目录的本地仓库 
+- rm -r .git 删除当前目录的本地仓库
+
+
+## 遇到的问题
+1. 远程仓库包含本地不存在的提交
+<pre><code>提示：更新被拒绝，因为远程仓库包含您本地尚不存在的提交。这通常是因为另外
+提示：一个仓库已向该引用进行了推送。再次推送前，您可能需要先整合远程变更
+提示：（如 'git pull ...'）。
+提示：详见 'git push --help' 中的 'Note about fast-forwards' 小节。
+</code></pre>
+解决方法：<pre><code>git pull origin master</code></pre>
+
+2. 拒绝合并无关历史
+<pre><code>warning: 没有共同的提交
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+展开对象中: 100% (3/3), 完成.
+来自 github.com:S-TRAVELER/LearningFiles
+  × branch            master     -> FETCH_HEAD
+  × [新分支]          master     -> origin/master
+fatal: 拒绝合并无关的历史
+</code></pre>
+  解决方法：<pre><code>git pull origin master --allow-unrelated-histories </code></pre>
