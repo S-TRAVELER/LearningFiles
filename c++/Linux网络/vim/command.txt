@@ -1,0 +1,27 @@
+1. Vim常用分屏命令：
+
+sp 水平分屏+1
+vsp 竖直分屏+1
+vsp filename 竖直分屏并打开file
+ctrl+w+w  切换分屏
+vim -on file1 file2 水平分屏打开n个文件
+vim -On file1 file2 竖直分屏打开n个文件
+qall 关闭所有
+wall 保存所有
+wqall 保存关闭所有
+
+用范围分为当前行、全文、选区等等。
+当前行：
+:s/foo/bar/g
+全文：
+:%s/foo/bar/g
+选区，在Visual模式下选择区域后输入:，Vim即可自动补全为 :'<,'>。
+:'<,'>s/foo/bar/g
+2-11行：
+:5,12s/foo/bar/g
+当前行.与接下来两行+2：
+:.,+2s/foo/bar/g
+
+大小写敏感查找
+在查找模式中加入\c表示大小写不敏感查找，\C表示大小写敏感查找。例如：
+/foo\c
