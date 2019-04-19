@@ -1,0 +1,3 @@
+# LinAux Makefile
+
+## 1. 
